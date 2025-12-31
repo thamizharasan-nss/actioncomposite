@@ -34,6 +34,7 @@ runs:
 
     - name: variables 
       id: vars
+      shell: bash
       run: |
         echo "repo_owner=${{ github.repository_owner }}" >> $GITHUB_OUTPUT
         echo "default_branch=main" >> $GITHUB_OUTPUT
