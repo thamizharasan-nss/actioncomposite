@@ -11,12 +11,18 @@ jobs:
          uses: actions/checkout@v5
          
        - name: using the composite function
+         id: composite-step
          uses: thamizharasan-nss/actioncomposite/.github/workflows@main
        
        - name: using the shell command 
          run: |
            echo "This composite action"
            echo "This testing the action in the github"
+
+       - name: using the outputs
+         run: |
+           echo "repo-owner= ${{ steps.composite-step.outputs.repo-owner }}"
+           echo "branch= ${{ steps.composite-step.outputs.branch }}"
 
   dummy-workflow-supply:
      runs-on: ubuntu-latest
