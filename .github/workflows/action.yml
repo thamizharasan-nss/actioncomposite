@@ -1,17 +1,29 @@
 name: using the composite action
 
+inputs:
+ java-version:
+   required: true
+   default: '21'
+ distribution:
+   required: true 
+   default: 'temurin'
+ python-version:
+   required: true 
+   default: '3.13'
+
 runs:
   using: "composite"
   steps:
     - name: Installing the java
       uses: actions/setup-java@v5
       with:
-        java-version: '21'
-        distribution: 'temurin'
+        java-version: {{ inputs.java-version }}
+        distribution: {{ inputs.distribution }}
+        
 
     - name: setup the python
       uses: actions/setup-python@v6
       with:
-        python-version: '3.13'
+        python-version: {{ inputs.python-version }}
 
   
