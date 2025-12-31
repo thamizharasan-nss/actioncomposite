@@ -11,7 +11,7 @@ jobs:
          uses: actions/checkout@v5
          
        - name: using the composite function
-         uses: thamizharasan-nss/actioncomposite/tree/main/.github/workflows@main
+         uses: thamizharasan-nss/actioncomposite/.github/workflows@main
        
        - name: using the shell command 
          run: |
