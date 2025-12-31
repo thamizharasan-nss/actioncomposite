@@ -1,0 +1,47 @@
+name: this is dummy workflow 
+
+on:
+   push
+
+jobs:
+  dummy-workflow:
+     runs-on: ubuntu-latest
+     steps:
+       - name: Installing the java
+         uses: actions/setup-java@v5
+         with:
+           java-version: '21'
+           
+       - name: setup the python 
+         uses: actions/setup-python@v6
+         with:
+           python-version: '3.13' 
+
+       - name: using the shell command 
+         run: |
+           echo "This composite action"
+           echo "This testing the action in the github"
+
+  dummy-workflow-supply:
+     runs-on: ubuntu-latest
+     steps:
+       - name: Installing the java
+         uses: actions/setup-java@v5
+         with:
+           java-version: '21'
+           
+       - name: setup the python 
+         uses: actions/setup-python@v6
+         with:
+           python-version: '3.13' 
+
+       - name: using the shell command 
+         run: |
+           echo "This composite action"
+           echo "This testing the action in the github"         
+       
+        
+
+
+   
+   
