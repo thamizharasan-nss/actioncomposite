@@ -10,7 +10,7 @@ on:
        default: "STR"
      gender:
        description: "Enter your gender"
-       type: option 
+       type: choice
        required: true 
        options:
          - Male
