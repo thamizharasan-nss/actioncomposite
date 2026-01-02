@@ -8,6 +8,14 @@ on:
        type: string 
        required: true 
        default: "STR"
+     gender:
+       description: "Enter your gender"
+       type: option 
+       required: true 
+       options:
+         - Male
+         - Female
+       
    
 jobs:
   dummy-manual:
@@ -18,3 +26,6 @@ jobs:
 
     - name: Display the input value 
       run: "echo ${{ inputs.name }}"
+
+    - name: Display the gender value 
+      run: "echo ${{ inputs.gender }}"  
