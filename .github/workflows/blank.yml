@@ -2,10 +2,19 @@ name: manual workflow
 
 on:
   workflow_dispatch: 
-
+   inputs:
+     name: 
+       description: "This simple name"
+       type: string 
+       required: true 
+       default: "STR"
+   
 jobs:
   dummy-manual:
     runs-on: ubuntu-latest
     steps:
     - name: using the manual workflow
       run: "echo This is testing job" 
+
+    - name: Display the input value 
+      run: "echo ${{ inputs.name }}"
