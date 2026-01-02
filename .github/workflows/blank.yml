@@ -1,0 +1,11 @@
+name: manual workflow 
+
+on:
+  workflow_dispatch: 
+
+jobs:
+  dummy-manual:
+    runs-on: ubuntu-latest
+    steps:
+    - name: using the manual workflow
+      run: "echo This is testing job" 
